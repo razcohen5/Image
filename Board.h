@@ -3,7 +3,7 @@
 #include <string>
 #include <exception>
 #include <fstream>
-#include "Coordinate.h"
+//#include "Coordinate.h"
 
 using namespace std;
 struct RGB;
@@ -24,7 +24,7 @@ public:
 	Board(const Board& other);
 
 
-	//const Bridge operator[](const Coordinate& c);
+	const Bridge operator[](const Coordinate& c);
 
 	const Bridge operator[](const Coordinate& c) const;
 
@@ -33,8 +33,6 @@ public:
 	Board& operator=(const Board& other);
 
 	string draw(int n);
-
-	inline bool exists_test0 (const std::string& name);
 
 	friend istream& operator >> (istream& in, Board& b);
 
